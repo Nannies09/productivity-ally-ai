@@ -53,10 +53,10 @@ const config: ToolConfig = {
   ],
   buildPrompt: (v) =>
     [
-      `Research topic: ${v.topic}`,
-      `Depth: ${v.depth}`,
-      `Preferred format: ${v.format}`,
-      v.context ? `Business context: ${v.context}` : "",
+      `Research topic: ${v["topic"]}`,
+      `Depth: ${v["depth"]}`,
+      `Preferred format: ${v["format"]}`,
+      v["context"] ? `Business context: ${v["context"]}` : "",
       "Be explicit about uncertainty and list what the reader must verify independently.",
     ]
       .filter(Boolean)

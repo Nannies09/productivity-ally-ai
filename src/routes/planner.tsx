@@ -55,10 +55,10 @@ const config: ToolConfig = {
   ],
   buildPrompt: (v) =>
     [
-      `Create a ${v.style} for this goal: ${v.goal}`,
-      `Timeframe: ${v.timeframe}`,
-      v.capacity ? `Available capacity: ${v.capacity}` : "",
-      v.constraints ? `Constraints and priorities: ${v.constraints}` : "",
+      `Create a ${v["style"]} for this goal: ${v["goal"]}`,
+      `Timeframe: ${v["timeframe"]}`,
+      v["capacity"] ? `Available capacity: ${v["capacity"]}` : "",
+      v["constraints"] ? `Constraints and priorities: ${v["constraints"]}` : "",
     ]
       .filter(Boolean)
       .join("\n"),

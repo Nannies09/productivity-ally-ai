@@ -54,10 +54,10 @@ const config: ToolConfig = {
   ],
   buildPrompt: (v) =>
     [
-      `Summarize these ${v.meetingType} notes for this audience: ${v.audience}.`,
-      v.focus ? `Pay extra attention to: ${v.focus}` : "",
+      `Summarize these ${v["meetingType"]} notes for this audience: ${v["audience"]}.`,
+      v["focus"] ? `Pay extra attention to: ${v["focus"]}` : "",
       "Notes:",
-      v.notes,
+      v["notes"],
     ]
       .filter(Boolean)
       .join("\n"),

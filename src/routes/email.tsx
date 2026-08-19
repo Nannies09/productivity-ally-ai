@@ -56,11 +56,11 @@ const config: ToolConfig = {
   buildPrompt: (v) =>
     [
       "Write a workplace email.",
-      `Recipient/audience: ${v.recipient}`,
-      `Purpose and key points: ${v.purpose}`,
-      `Tone: ${v.tone}`,
-      `Length: ${v.length}`,
-      v.cta ? `Desired action / call to action: ${v.cta}` : "",
+      `Recipient/audience: ${v["recipient"]}`,
+      `Purpose and key points: ${v["purpose"]}`,
+      `Tone: ${v["tone"]}`,
+      `Length: ${v["length"]}`,
+      v["cta"] ? `Desired action / call to action: ${v["cta"]}` : "",
       "Format: '**Subject:** …' on the first line, blank line, then the email body with greeting and sign-off placeholder [Your name].",
     ]
       .filter(Boolean)
